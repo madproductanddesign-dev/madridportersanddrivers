@@ -1,0 +1,390 @@
+/* ====================== GENERAL STYLES ====================== */
+:root {
+    --primary: #1e3a8a;
+    --accent: #ffd700;
+    --header-bg: #b22222;
+    --footer-bg: #2c2c2c;
+    --footer-bottom: #1f1f1f;
+    --text: #333;
+    --light-bg: #f9f9f9;
+    --border: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* ====================== HEADER ====================== */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--header-bg);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container a {
+    color: white;
+}
+
+.header-container a:hover {
+    color: var(--accent);
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+    max-width: 250px;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* ====================== MAIN CONTENT ====================== */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+/* ====================== SLIDESHOW ====================== */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dots {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: var(--accent);
+}
+
+/* ====================== REVIEW BOX ====================== */
+.review {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 2rem;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.review-content {
+    width: 100%;
+}
+
+.review h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+}
+
+.date {
+    color: #777;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+/* ====================== REVIEW BADGES - IMPROVED ====================== */
+.review-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+}
+
+.badge-link {
+    display: block;
+    transition: all 0.25s ease;
+}
+
+.badge-link:hover {
+    transform: scale(1.08);
+}
+
+.badge-img {
+    max-height: 62px;           /* Less squashed, better proportions */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .review-badges {
+        gap: 24px;
+        margin: 2rem 0;
+    }
+    
+    .badge-img {
+        max-height: 54px;
+        padding: 6px 12px;
+    }
+    
+    .review-badges .badge-link img {
+        height: auto; /* safety override */
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+    .badge-img {
+        max-height: 68px;
+    }
+}
+
+/* ====================== RATES PAGE ====================== */
+.rates-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 3px solid var(--accent);
+}
+
+.rates-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.rates-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.rates-table th,
+.rates-table td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.rates-table th {
+    background: #f0f4f8;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+}
+
+.rates-table td:first-child {
+    font-weight: 500;
+}
+
+.rates-table tr:hover {
+    background: #f8f9fa;
+}
+
+.additional-notes {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent);
+    margin-top: 1.5rem;
+}
+
+.additional-notes h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* ====================== SERVICES LIST ====================== */
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.services-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    line-height: 1.5;
+    border-bottom: 1px solid #eee;
+}
+
+.services-list li:last-child {
+    border-bottom: none;
+}
+
+.services-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ====================== HERO & TEXT ====================== */
+.hero-section h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.hero-section p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+/* ====================== CONTACT CTA ====================== */
+.contact-cta {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 600px;
+}
+
+.contact-cta p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* ====================== FOOTER ====================== */
+.footer {
+    background: var(--footer-bg);
+    color: white;
+    padding: 3rem 5% 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section a {
+    color: #ddd;
+}
+
+.footer-section a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    background: var(--footer-bottom);
+    color: #aaa;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .logo img {
+        height: 70px;
+    }
+    
+    .slideshow-container {
+        max-width: 100%;
+    }
+}

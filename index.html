@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madrid Porters and Drivers - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="madridpandd-logo.png" 
+                     alt="Madrid Porters and Drivers Logo" 
+                     onerror="this.style.display='none';">
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="rates.html">Rates</a>
+                <a href="terms.html">T/C's</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Smaller Slideshow -->
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="image1.png" alt="Professional move assistance in Madrid">
+            </div>
+            <div class="slide">
+                <img src="image2.png" alt="Outdoor furniture move assistance">
+            </div>
+            <div class="slide">
+                <img src="image3.png" alt="Team loading van in Madrid">
+            </div>
+            <div class="slide">
+                <img src="image4.png" alt="Carrying furniture up stairs">
+            </div>
+            <div class="slide">
+                <img src="image5.png" alt="Warehouse goods handling">
+            </div>
+            <div class="slide">
+                <img src="image6.png" alt="Furniture reassembly service">
+            </div>
+        </div>
+
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+
+        <section class="hero-section">
+            <h2><strong>Trade Assistance Across Spain, Europe, and Beyond!</strong></h2>
+            
+            <p>At Madrid Porters and Drivers, we help you move your clients — whether it’s across Spain, Europe, or further afield. We specialise in portering, packing, loading/unloading, and driving support with excellent customer service.</p>
+            
+            <p><strong>English-speaking professional porters &amp; drivers – Madrid &amp; Toledo</strong><br>
+            (Perfect for UK, French, German, Dutch &amp; international lorries and corporate relocations)</p>
+
+            <ul class="services-list">
+                
+                 <li><strong>We always bring our own tools and electric drill </strong> - Sack barrow and platform available to rent </li>
+                <li><strong>Unloading lorries</strong> – Safe efficient loading or  unloading of international trucks.</li>
+                <li><strong>Export packing</strong> – Professional export packing with your blankets, bubble wrap, crates and shrink-wrap for overseas or long-haul moves- New blanket bundles available for sale. Please enquire.</li>
+                <li><strong>Unpacking</strong> – Careful unpacking and placement of items at the final destination.</li>
+                <li><strong>Furniture disassembly &amp; reassembly</strong> – Full disassembly and assembly of beds, wardrobes, sofas, kitchens and flat-pack items.</li>
+                <li><strong>Professional driving assistance</strong> – Experienced English-speaking drivers/porters who can drive up to 7.5 tonne lorries.</li>
+                <li><strong>Photography/video service for insurance</strong> – Complete visual documentation with timestamps and organised report sent directly to your driver or company via WhatsApp/email.</li>
+                <li><strong>Insurance-friendly documentation</strong> – High-resolution images that meet UK, EU and international insurer standards.</li>
+                <li><strong>English-speaking porters</strong> tailored to your job.</li>
+                <li><strong>Coordination &amp; communication</strong> – Full English liaison with drivers and relocation companies.</li>
+                <li><strong>Early-morning service</strong> – Quick response around long-haul driver schedules.</li>
+                <li><strong>Equipment hire</strong> – Trolley and platform available for hire.</li>
+                <li><strong>Blankets for sale</strong> – New blanket bundles for sale. Notice required please email me.</li>
+                
+                <li><strong>Madrid, Toledo, Segovia, Alcalá de Henares, Aranjuez, Ávila, Cuenca, Guadalajara, Getafe, Leganés, Fuenlabrada, Parla, Pinto, Ciempozuelos, Chinchón, El Escorial, Rascafría.</strong>
+
+            </ul>
+            
+            <p><strong>Standard rate:</strong> €280 per man for a full 8-hour day (€35/hour).Half day rates available<br>
+               Photography and any other extra services available as flat fees or included on larger jobs.</p>
+            
+            <p>Email us to discuss discounts for longer timeframes or check our rates below</p>
+            
+            <a href="rates.html" class="cta-button">Check our rates here</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <h3>Madrid Porters and Drivers</h3>
+                <p>Your trusted partner for packing, loading and unloading. With over 20+ years of experience in moving, we deliver exceptional service in Madrid, Spain and beyond.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><a href="https://wa.me/34640194369" target="_blank" rel="noopener noreferrer">WhatsApp: +34 640 19 43 69</a></p>
+                <p>Email: <a href="mailto:madridpandd@gmail.com">madridportersanddrivers</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <p>Valdemoro</p>
+                <p>Madrid, Spain</p>
+                <p>28342</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="reviews.html">Reviews</a></p>
+                <p><a href="rates.html">Rates</a></p>
+                <p><a href="terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Madrid Porters and Drivers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            for (let i = 0; i < slides.length; i++) slides[i].classList.remove("active");
+            for (let i = 0; i < dots.length; i++) dots[i].classList.remove("active");
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(slideIndex);
+        }
+
+        setInterval(() => {
+            slideIndex++;
+            showSlides(slideIndex);
+        }, 6000);
+    </script>
+</body>
+</html>
